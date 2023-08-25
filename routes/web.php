@@ -20,3 +20,6 @@ Route::get('/', [HomeController::class, "index"])->name("home");
 
 // Route Comics
 Route::get('/comics', [ComicController::class, "index"])->name("comics.index");
+
+// Route Single Comic
+Route::get('/comics/{comic}', [ComicController::class, "show"])->name("comics.show");
