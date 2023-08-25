@@ -5,7 +5,7 @@
 @section('main')
     <h1>Crea un nuovo fumetto</h1>
     <div class="container">
-        <form action="{{ route('comics.store') }}" method="POST" novalidate>
+        <form action="{{ route('comics.store') }}" method="POST">
             @csrf
             <div class="row">
                 <div class="col-12">
