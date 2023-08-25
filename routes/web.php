@@ -21,5 +21,14 @@ Route::get('/', [HomeController::class, "index"])->name("home");
 // Route Comics
 Route::get('/comics', [ComicController::class, "index"])->name("comics.index");
 
+// Route on Create Page
+
+Route::get('/comics/create', [ComicController::class, "create"])->name("comics.create");
+
+// Route on Store 
+
+Route::post('/comics', [ComicController::class, "store"])->name("comics.store");
+
 // Route Single Comic
+
 Route::get('/comics/{comic}', [ComicController::class, "show"])->name("comics.show");
