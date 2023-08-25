@@ -35,7 +35,7 @@
                 <div class="col-4">
                     <div class="mb-3">
                         <label for="series" class="form-label">Series</label>
-                        <input type="url" class="form-control" id="series" name="series" required>
+                        <input type="text" class="form-control" id="series" name="series" required>
                     </div>
                 </div>
                 <div class="col-4">
