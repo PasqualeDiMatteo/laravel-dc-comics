@@ -9,20 +9,29 @@
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    @yield('cdns')
     <!-- Styles -->
     @vite('resources/js/app.js')
 
 </head>
 
 <body>
+
     {{-- Header --}}
+
     @include('includes.header')
+
     {{-- Main --}}
 
     <main>
+        {{-- Jumbotron --}}
+        @include('includes.jumbotron')
         @yield('main')
     </main>
+
+    {{-- Footer --}}
+
+    @include('includes.footer')
 
 </body>
 

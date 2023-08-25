@@ -1,0 +1,162 @@
+@use "../scss/vars" as *;
+
+#comic{
+    position: relative;
+    .card-comic{
+        width: 230px;
+        margin: 30px 0;
+        overflow: hidden;
+        padding: 0 1.3rem ;
+        position: absolute;
+        bottom: 93%;
+        img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    }
+    .bg-blue{
+        background-color:$blue ;
+        height: 70px;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px 0;
+        .card-left{
+            flex-basis: 60%;
+        }
+        .card-right{
+            flex-basis: 40%;
+            text-align: end;
+            
+        }
+    }
+    h2{
+        margin-bottom: 20px;
+        color: $font-blue;
+        font-size: 35px;
+    }
+
+    .availability{
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #55ba59;
+        border-bottom: 1px solid black;
+        .availability-left{
+            display: flex;
+            padding: 20px 25px;
+            flex-basis:70% ;
+            border-right:1px solid black ;
+            .price{
+                flex-basis:60% ;
+                height: 100%;
+                font-weight: 600;
+                color: #bafd9c;
+                span{
+                    color: white;
+                }
+            }
+            .status{
+                flex-basis:40% ;
+                text-align: end;
+                font-weight: 600;
+                color: #bafd9c;
+            }
+        }
+        .availability-right{
+            text-align: center;
+            padding: 20px 25px;
+            flex-basis:30% ;
+            font-weight: 600;
+            color: white;
+        }
+        
+    }
+    .description{
+        color: $grey;
+        font-size: 20px;
+        line-height: 29px;
+    }
+    h5{
+        color: $grey;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .info-comic{
+        background-color: #f6f6f6;
+        .row{
+            display: flex;
+            justify-content: space-between;
+            .col{
+                flex-basis: 48%;
+                margin-bottom: 100px;
+                .row-info{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    border-bottom: 1px solid lightgray;
+                    
+                }
+                .col-left{
+                    color: $font-blue;
+                }
+                .col-right{
+                    flex-basis: 70%;
+                    color: $blue;
+                }
+                .color-black{
+                    color: black;
+                }
+            }
+        }
+        h4{
+            padding: 30px 0;
+            font-size: 30px;
+            color: $font-blue;
+            border-bottom: 1px solid lightgray;
+        }
+        .links{
+            border-top: 1px solid lightgray;
+            .row{
+                display: flex;
+                margin: 0;
+            }
+            .col{
+                flex-basis: 25%;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                border-left: 1px solid lightgray;
+                border-right: 1px solid lightgray;
+                margin: 0;
+                h6{
+                    color:lightgray ;
+                    font-weight: 600;
+                    font-size: 17px;
+                }
+                img{
+                    width: 60px;
+                    color: $dark-gray;
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(33%) saturate(3884%) hue-rotate(182deg) brightness(122%) contrast(73%);
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    i{
+        position: absolute;
+        top: 20%;
+        transform: translateY(-50%);
+        color: $blue;
+    }
+    .fa-chevron-right{
+        right: 10px;
+    }
+    .fa-chevron-left{
+        left: 10px;
+    }
+}

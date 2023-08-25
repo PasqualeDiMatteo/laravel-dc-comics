@@ -1,0 +1,67 @@
+@use "../scss/mixins" as *;
+@use "../scss/vars" as *;
+footer{
+    .background {
+        background: no-repeat 80% 50% /600px url(../img/dc-logo-bg.png), no-repeat center / 2000px url(../img/footer-bg.jpg);
+    }
+    
+    h2 {
+        color: white;
+        padding: 10px 0;
+    }
+    
+    a {
+        color: gray;
+        line-height: 30px;
+    }
+    
+    .list-container {
+        display: flex;
+        padding-bottom: 40px;
+    }
+    
+    .list-item {
+        margin-right: 50px;
+    } 
+
+    .footer-bottom{
+        background-color: $grey;
+        height: 94px;
+        
+        .content {
+            @include flexbox(space-between, center);
+            height: 100%;
+        }
+        
+        .social-icon {
+            @include flexbox(flex-start, center);
+        }
+        
+        button {
+            background-color: inherit;
+            border: 1px solid $blue;
+            padding: 10px 20px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        ul {
+            display: flex;
+        }
+        
+        li {
+            padding: 10px;
+        }
+        
+        .container {
+            height: 100%;
+        }
+        
+        span {
+            color: $blue;
+            margin-right: 20px;
+            font-weight: 600;
+        }
+    }
+}

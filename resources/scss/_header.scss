@@ -1,0 +1,90 @@
+@use "../scss/mixins" as *;
+@use "../scss/vars" as *;
+
+header{
+
+
+    .nav-bar {
+        @include flexbox(space-between, center);
+        height: 120px
+    }
+
+    figure {
+        flex-basis: calc(100%/5);
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        @include flexbox(space-between, center);
+    }
+
+    img {
+        height: 80px;
+        align-items: center;
+    }
+
+    nav {
+        flex-basis: calc(100%/5*4);
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        text-align: right;
+    }
+
+    ul {
+        display: flex;
+        height: 100%;
+        justify-content: end;
+
+    }
+
+    li {
+        height: 100%;
+        @include flexbox(flex-start, center);
+    }
+
+    a {
+        color: black;
+        padding: 0px 10px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        line-height: 117px;
+        &:hover{
+            color: $blue;
+        }
+    }
+
+
+    .active {
+        color: $blue;
+        border-bottom: 3px solid $blue;
+    }
+
+    input{
+        margin-left: 50px;
+        border: 2px solid transparent;
+        padding: 8px;
+        border-bottom:  2px solid $blue;
+
+        &::placeholder{
+            text-align: end;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-right: 15px;
+            
+        }
+
+        &:focus-visible{
+            border:none;
+            outline: none;
+            border:  2px solid $blue;
+            border-radius: 9px;
+        }
+        
+    }
+    .search-bar{
+        position: relative;
+    }
+
+}

@@ -2,28 +2,65 @@
 
 @section('title', 'Comics')
 
+
+
 @section('main')
-    <h1>Comics</h1>
-    <div class="text-end">
-        <a href="{{ route('comics.create') }}" class="btn btn-primary m-3 p-3">Crea un comic</a>
-    </div>
-    <div class="container">
-        <div class="row row-cols-6">
-            @forelse ($comics as $comic)
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="h-100">
-                            <img src="{{ $comic->thumb }}" class="card-img-top" alt="..." class="img-fluid w-100">
+    <div id="comics">
+        {{-- Background --}}
+        <div class="background">
+            <div class="container container-card">
+                <div class="series">CURRENT SERIES</div>
+                <div class="content">
+
+                    {{-- Card --}}
+                    @foreach ($comics as $comic)
+                        <div class="card">
+                            <a href="{{ route('comics.show', $comic) }}">
+                                <img src="{{ $comic->thumb }}" alt='{{ $comic->series }}'>
+                                <h3>{{ $comic->series }}</h3>
+                            </a>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $comic->title }}</h5>
-                            <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary">Info</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-            @empty
-                <h2>Non ci sono Comics</h2>
-            @endforelse
+                <button><a href="{{ route('comics.create') }}">Crea un comic</a></button>
+            </div>
+        </div>
+        {{-- Main Links --}}
+        <div class="main-links">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="DC">
+                            <h3>DIGITAL COMICS</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ Vite::asset('resources/img/buy-comics-merchandise.png') }}" alt="DC">
+                            <h3>DC MERCHANDISE</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ Vite::asset('resources/img/buy-comics-subscriptions.png') }}" alt="DC">
+                            <h3>SUBSCRIPTION</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ Vite::asset('resources/img/buy-comics-shop-locator.png') }}" alt="DC">
+                            <h3>COMIC SHOP LOCATOR</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ Vite::asset('resources/img/buy-dc-power-visa.svg') }}" alt="DC">
+                            <h3>DC POWER VISA</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 @endsection

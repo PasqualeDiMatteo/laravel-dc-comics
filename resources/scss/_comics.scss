@@ -1,0 +1,83 @@
+@use "../scss/mixins" as *;
+@use "../scss/vars" as *;
+
+#comics{
+
+    .container-card {
+        padding-bottom: 30px;
+        position: relative;
+    }
+    
+    .series {
+        color: white;
+        padding: 10px 20px;
+        background-color: $blue;
+        position: absolute;
+        top: 0;
+        left: 25px;
+        transform: translateY(-50%);
+    }
+    
+    .background {
+        background-color: $dark-gray;
+    }
+    
+    .content {
+        @include flexbox(start, start, wrap);
+    }
+    
+    button {
+    display: block;
+    margin: 0 auto;
+    background-color: $blue;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    }
+
+    .card {
+        flex-basis: calc(100% / 6);
+        margin: 30px 0;
+        overflow: hidden;
+        padding: 0 1.3rem ;
+    
+        img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    
+        h3 {
+            margin-top: 10px;
+            color: white;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+    }
+    .main-links {
+        background-color: $blue;
+        
+        img {
+            width: 60px;
+            height: 70px;
+            margin-right: 10px;
+            object-fit: scale-down;
+        }
+        
+        ul {
+            @include flexbox(space-between, center);
+            width: 100%;
+            height: 150px;
+        }
+        
+        a {
+            padding: 0 40px;
+            @include flexbox(flex-start, center);
+            font-size: 0.7rem;
+            color: white;
+        }
+    }
+}

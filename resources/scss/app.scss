@@ -1,1 +1,11 @@
-@import '~bootstrap/scss/bootstrap';
+
+@use "../scss/config";
+@use "../scss/vars";
+@use "../scss/mixins";
+@use "../scss/header";
+@use "../scss/jumbotron";
+@use "../scss/comics";
+@use "../scss/comic";
+@use "../scss/footer";
+
+// @import '~bootstrap/scss/bootstrap';
