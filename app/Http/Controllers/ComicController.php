@@ -32,6 +32,21 @@ class ComicController extends Controller
     {
         //
         $data = $request->all();
+
+        // Validation
+
+        $request->validate([
+            'title' => 'required|unique:comics|string',
+            'description' => 'required|string',
+            'thumb' => 'required|url:http,https',
+            'price' => 'required|string',
+            'series' => 'required|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
+        ]);
+
         $data["price"] = "$" . $data["price"];
         $new_comic = new Comic();
         $new_comic->fill($data);
