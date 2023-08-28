@@ -34,6 +34,7 @@
                     </div>
                     {{-- Desciption --}}
                     <p class="description">{{ $comic->description }}</p>
+                    <a href="{{ route('comics.edit', $comic) }}" class="btn">Modifica</a>
                 </div>
                 {{-- Card Right --}}
                 <div class="card-right">

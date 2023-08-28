@@ -80,6 +80,7 @@
         color: $grey;
         font-size: 20px;
         line-height: 29px;
+        margin-bottom: 50px;
     }
     h5{
         color: $grey;
@@ -159,4 +160,12 @@
     .fa-chevron-left{
         left: 10px;
     }
+
+    .btn{
+        padding: 15px 20px;
+        background: orange;
+        border-radius: 10px;
+        color: white;
+    }
+
 }
