@@ -45,16 +45,16 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
         //
-
         return view("comics.show", compact("comic"));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
         //
+        return view("comics.edit", compact("comic"));
     }
 
     /**
