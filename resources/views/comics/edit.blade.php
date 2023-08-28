@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Thumb</label>
                         <input type="url" class="form-control @error('thumb') is-invalid @enderror" id="thumb"
@@ -42,6 +42,11 @@
                         <div class="invalid-feedback">
                             {{ $errors->first('thumb') }}
                         </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="mb-3">
+                        <img src="{{ $comic->thumb }}" alt="prevue" class="img-fluid" id="logo">
                     </div>
                 </div>
                 <div class="col-4">
@@ -113,4 +118,8 @@
             </div>
         </form>
     </div>
+@endsection
+
+@section('scripts')
+    @vite('resources/js/image-prevue.js')
 @endsection
