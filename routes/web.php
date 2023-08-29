@@ -40,3 +40,8 @@ Route::get('/comics/{comic}', [ComicController::class, "show"])->name("comics.sh
 // Route on Update
 
 Route::put('/comics/{comic}', [ComicController::class, "update"])->name("comics.update");
+
+
+// Route Destroy
+
+Route::delete('/comics/{comic}', [ComicController::class, "destroy"])->name("comics.destroy");

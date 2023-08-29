@@ -34,7 +34,14 @@
                     </div>
                     {{-- Desciption --}}
                     <p class="description">{{ $comic->description }}</p>
-                    <a href="{{ route('comics.edit', $comic) }}" class="btn">Modifica</a>
+                    <div class="btn-container">
+                        <a href="{{ route('comics.edit', $comic) }}" class="btn bg-orange">Modifica</a>
+                        <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn bg-red">Elimina</button>
+                        </form>
+                    </div>
                 </div>
                 {{-- Card Right --}}
                 <div class="card-right">
