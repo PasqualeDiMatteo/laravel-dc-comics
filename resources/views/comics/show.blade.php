@@ -36,7 +36,8 @@
                     <p class="description">{{ $comic->description }}</p>
                     <div class="btn-container">
                         <a href="{{ route('comics.edit', $comic) }}" class="btn bg-orange">Modifica</a>
-                        <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                        <form action="{{ route('comics.destroy', $comic) }}" method="post" class="delete-form"
+                            data-name="{{ $comic->title }}">
                             @csrf
                             @method('DELETE')
                             <button class="btn bg-red">Elimina</button>
@@ -124,4 +125,10 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+
+    @vite('resources/js/delete-confirm.js')
+
 @endsection
